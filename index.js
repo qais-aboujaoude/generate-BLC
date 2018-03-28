@@ -22,6 +22,7 @@ const createBLC = name => {
 program
   .version('1.2.0')
   .description('A tool to manage the environment variables of an Elastic Beanstalk App')
+  .usage('-c -n <name of BLC>')
   .option('-c, --create', 'create BLC')
   .option('-n, --name [name]', 'name of the Elastic Beanstalk environment to update')
   .parse(process.argv)
