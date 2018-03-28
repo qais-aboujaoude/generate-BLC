@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 const program = require('commander'),
-  fs = require('fs')
+      fs = require('fs')
 
 const BLC = name => {
   return `const BLC = require(__dirname + '/../blc');
@@ -12,6 +14,7 @@ const BLC = name => {
     }
   };`
 }
+
 const createBLC = name => {
   const file = fs.createWriteStream(`${name}BLC.js`);
   file.on('error', err => { throw new Error(`Error: ${err}`) })
